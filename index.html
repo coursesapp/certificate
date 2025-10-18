@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Certificate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arabic Simplified', 'Arabic Transparent', 'Arial', sans-serif;
+            background-color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            width: 1363px;
+            margin: 0 auto;
+            font-size: 12px;
+            line-height: 1.2;
+        }
+
+        .header {
+            width: 100%;
+            display: block;
+        }
+
+        .header img {
+            width: 100%;
+            height: auto;
+            display: block;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            pointer-events: none;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+        }
+
+        .certificate-container {
+            flex: 1;
+            background-color: white;
+            margin: 10px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .body-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            pointer-events: none;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+        }
+
+        /* Student Information Section */
+        .student-info-section {
+            margin-bottom: 15px;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #000;
+        }
+
+        .info-table td {
+            border: 1px solid #000;
+            padding: 8px 10px;
+            font-size: 11px;
+            line-height: 1.2;
+            vertical-align: top;
+        }
+
+        .label, .label-ar {
+            background-color: #f0f0f0;
+            font-weight: bold;
+            width: 22%;
+        }
+
+        .value, .value-ar {
+            width: 28%;
+        }
+
+        .label-ar, .value-ar {
+            text-align: right;
+            direction: rtl;
+        }
+
+        /* Subjects Table */
+        .subjects-section {
+            margin-bottom: 15px;
+        }
+
+        .subjects-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #000;
+        }
+
+        .subjects-table th {
+            background-color: #f0f0f0;
+            border: 1px solid #000;
+            padding: 6px 4px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 11px;
+            line-height: 1.1;
+        }
+
+        .subjects-table td {
+            border: 1px solid #000;
+            padding: 4px 6px;
+            font-size: 11px;
+            line-height: 1.1;
+        }
+
+        .subject-col {
+            width: 60%;
+        }
+
+        .grade-col, .mark-col {
+            width: 20%;
+            text-align: center;
+        }
+
+        .subject-name {
+            text-align: left;
+        }
+
+        .grade, .mark {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Summary Section */
+        .summary-section {
+            margin-bottom: 15px;
+        }
+
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #000;
+        }
+
+        .summary-table td {
+            border: 1px solid #000;
+            padding: 4px 6px;
+            font-size: 11px;
+            line-height: 1.1;
+        }
+
+        .summary-label, .summary-label-ar {
+            background-color: #f0f0f0;
+            font-weight: bold;
+            width: 20%;
+        }
+
+        .summary-value {
+            width: 30%;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .summary-label-ar {
+            text-align: right;
+            direction: rtl;
+        }
+
+        /* Grading Scale */
+        .grading-scale {
+            margin-bottom: 15px;
+        }
+
+        .scale-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #000;
+        }
+
+        .scale-table th, .scale-table td {
+            border: 1px solid #000;
+            padding: 4px 6px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 11px;
+            line-height: 1.1;
+        }
+
+        .scale-table th {
+            background-color: #f0f0f0;
+        }
+
+        /* Footnotes */
+        .footnotes {
+            margin-top: 15px;
+        }
+
+        .footnotes p {
+            font-size: 10px;
+            margin: 3px 0;
+            line-height: 1.2;
+        }
+
+        .footer {
+            width: 100%;
+            display: block;
+            margin-top: auto;
+        }
+
+        .footer img {
+            width: 100%;
+            height: auto;
+            display: block;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            pointer-events: none;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .certificate-container {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .header img,
+            .body-image,
+            .footer img {
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+                object-fit: contain;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .certificate-container {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .header img,
+            .body-image,
+            .footer img {
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+                object-fit: contain;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="header.png" alt="Certificate Header">
+    </div>
+
+    <div class="certificate-container">
+        <img src="body.png" alt="Certificate Body" class="body-image">
+    </div>
+
+    <div class="footer">
+        <img src="footer.png" alt="Certificate Footer">
+    </div>
+</body>
+</html>
